@@ -1,0 +1,17 @@
+Update service providers!!!
+
+<div>
+  <form>
+      <img  alt="{{serviceProvider.image}}" width="100" height="100" src= "http://localhost:8080/api/image/{{serviceProvider.image}}" /><br/>
+      <td><div class="form-group">
+        <label for="file">File upload:</label>
+        <input type="file" class="form-control" accept="image/" (change)="onSelectFile($event,serviceProvider.id)" style="height:100%" />
+   </div></td>
+      Enter name: <input type="text" class="form-control" [(ngModel)]="serviceProvider.name" name = "name" value="serviceProvider.name" ><br/>
+      <button class="btn btn-success" (click) = "updateService(serviceProvider.id)">Update</button>
+  </form>
+
+  <button class="btn btn-danger" routerLink = "/">Back</button>
+  
+
+</div>
